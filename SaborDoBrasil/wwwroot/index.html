@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sabor do Brasil</title>
+  <link rel="stylesheet" href="./Style/style.css">
+  <script src="./js/index.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+   
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- COLUNA 1: PERFIL -->
+    <div class="col-md-3 profile-border text-center p-3">
+      <img src="logo_sabor_do_brasil.png" alt="Logo Sabor do Brasil" class="img-fluid mb-2" style="max-width: 150px;">
+      <h5>Sabor do Brasil</h5>
+      <div class="highlight-line"></div>
+      <p><strong>9</strong><br>Quantidade Likes</p>
+      <p><strong>12</strong><br>Quantidade Dislikes</p>
+    </div>
+
+    <!-- COLUNA 2: PUBLICAÇÕES -->
+    <div class="col-md-6 main-border">
+      <h4 class="text-center text-black">Publicações</h4>
+
+      <!-- Publicação 1 -->
+      <div class="publication">
+        <h6 class="text-start">Título do prato 01</h6>
+        <img src="prato01.jpg" class="img-fluid mb-2" alt="Prato 1">
+        <p class="text-muted">Local 01 - Maceió-AL</p>
+        <div class="d-flex gap-3">
+          <div><img src="flecha_cima_vazia.svg" class="interaction-icon">2</div>
+          <div><img src="flecha_baixo_vazia.svg" class="interaction-icon">1</div>
+          <div><img src="chat.svg" class="interaction-icon">4</div>
+        </div>
+      </div>
+
+      <!-- Publicação 2 -->
+      <div class="publication">
+        <h6 class="text-start">Título do prato 02</h6>
+        <img src="prato02.jpg" class="img-fluid mb-2" alt="Prato 2">
+        <p class="text-muted">Local 02 - Maceió-AL</p>
+        <div class="d-flex gap-3">
+          <div><img src="flecha_cima_vazia.svg" class="interaction-icon">9</div>
+          <div><img src="flecha_baixo_vazia.svg" class="interaction-icon">1</div>
+          <div><img src="chat.svg" class="interaction-icon">10</div>
+        </div>
+      </div>
+
+      <!-- Publicação 3 -->
+      <div class="publication">
+        <h6 class="text-start">Título do prato 03</h6>
+        <img src="prato03.jpg" class="img-fluid mb-2" alt="Prato 3">
+        <p class="text-muted">Local 03 - Maceió-AL</p>
+        <div class="d-flex gap-3">
+          <div><img src="flecha_cima_vazia.svg" class="interaction-icon">2</div>
+          <div><img src="flecha_baixo_vazia.svg" class="interaction-icon">1</div>
+          <div><img src="chat.svg" class="interaction-icon">2</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUNA 3: LOGIN -->
+    <div class="col-md-3 text-center p-5">
+      <button class="btn btn-login px-4 py-2">Entrar</button>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="row">
+    <div class="col-12 footer d-flex justify-content-center align-items-center gap-3">
+      <span>Sabor do Brasil</span>
+      <img src="Instagram.svg" alt="Instagram">
+      <img src="Twitter.svg" alt="Twitter">
+      <img src="Whatsapp.svg" alt="WhatsApp">
+      <img src="Globe.svg" alt="Site">
+      <span>Copyright - 2024</span>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h5 class="modal-title mb-3">Faça login para interagir</h5>
+      <button class="btn btn-login" data-bs-dismiss="modal">Ok</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

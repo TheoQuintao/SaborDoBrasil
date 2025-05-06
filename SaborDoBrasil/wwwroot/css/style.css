@@ -10,9 +10,10 @@ body {
     font-family: 'Arial', sans-serif;
     color: var(--text-color);
     background-color: #f8f9fa;
+    padding-bottom: 60px; /* Espaço para o footer */
 }
 
-/* Profile Column */
+/* Coluna Perfil */
 .profile-column {
     background-color: var(--white);
     border-right: 1px solid var(--secondary-color);
@@ -42,7 +43,7 @@ body {
     margin-right: 5px;
 }
 
-/* Main Column */
+/* Coluna Principal */
 .main-column {
     background-color: var(--white);
     border-right: 1px solid var(--secondary-color);
@@ -61,6 +62,7 @@ body {
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .publication-location {
@@ -80,21 +82,29 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
-.interaction-btn i {
+.interaction-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.interaction-btn .icon {
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
 }
 
-.like-active {
-    color: var(--red);
+.like-btn.active .icon {
+    content: url('assets/icons/flecha_cima_cheia.svg');
 }
 
-.dislike-active {
-    color: var(--red);
+.dislike-btn.active .icon {
+    content: url('assets/icons/flecha_baixo_cheia.svg');
 }
 
-/* Login Column */
+/* Coluna Login */
 .login-column {
     background-color: var(--white);
 }
@@ -119,6 +129,10 @@ body {
     object-fit: cover;
 }
 
+.user-stats {
+    font-size: 0.9rem;
+}
+
 /* Footer */
 .footer {
     background-color: var(--primary-color);
@@ -129,13 +143,21 @@ body {
     width: 100%;
 }
 
+.footer-brand {
+    font-weight: bold;
+}
+
 .social-icons img {
     width: 20px;
     height: 20px;
     margin: 0 5px;
 }
 
-/* Modals */
+.copyright {
+    font-size: 0.9rem;
+}
+
+/* Modais */
 .modal-content {
     border-radius: 10px;
 }
@@ -155,6 +177,13 @@ body {
     color: var(--white);
 }
 
+.publication-preview img {
+    max-height: 150px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
 .comment-item {
     border-bottom: 1px solid #eee;
     padding: 10px 0;
@@ -168,20 +197,22 @@ body {
     float: right;
 }
 
-.comment-actions i {
+.comment-actions img {
+    width: 16px;
+    height: 16px;
     margin-left: 10px;
     cursor: pointer;
 }
 
-.fa-edit {
-    color: var(--white);
+.icon-edit {
+    filter: brightness(0) invert(1);
 }
 
-.fa-trash {
-    color: var(--red);
+.icon-delete {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(7458%) hue-rotate(0deg) brightness(95%) contrast(118%);
 }
 
-/* Responsive adjustments */
+/* Responsivo */
 @media (max-width: 768px) {
     .profile-column, .main-column, .login-column {
         border-right: none;

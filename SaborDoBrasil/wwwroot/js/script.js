@@ -51,6 +51,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Buscar publicações da API e renderizar
+    const container = document.getElementById('publications-container');
+
+    fetch('/api/publicacoes')
+      .then(res => res.json())
+      .then(publicacoes => {
+        console.log('Publicações recebidas:', publicacoes); // <-- Adicione esta linha
+        container.innerHTML = '';
+        publicacoes.forEach(pub => {
+          container.innerHTML += `
+            <div class="publication-card">
+              <img src="${pub.imagem || 'assets/images/default.png'}" alt="${pub.titulo}" class="publication-image">
+              <h4>${pub.titulo}</h4>
+              <p class="publication-location">${pub.local}</p>
+              <div class="interaction-buttons">
+                <button class="interaction-btn like-btn" data-id="${pub.id}">
+                  <img src="assets/icons/flecha_cima_vazia.svg" alt="Like" class="icon">
+                  <span class="like-count">${pub.likes || 0}</span>
+                </button>
+                <button class="interaction-btn dislike-btn" data-id="${pub.id}">
+                  <img src="assets/icons/flecha_baixo_vazia.svg" alt="Dislike" class="icon">
+                  <span class="dislike-count">${pub.dislikes || 0}</span>
+                </button>
+                <button class="interaction-btn comment-btn" data-id="${pub.id}">
+                  <img src="assets/icons/chat.svg" alt="Comentar" class="icon">
+                  <span class="comment-count">${pub.comentarios ? pub.comentarios.length : 0}</span>
+                </button>
+              </div>
+            </div>
+          `;
+        });
+      });
+
     // Funções
     function toggleLogin() {
         if (state.loggedIn) {
@@ -64,25 +97,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('loginEmail').value;
         const password = document.getElementById('loginPassword').value;
 
-        // Simulação de login
-        if (email && password) {
+        fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, senha: password })
+        })
+        .then(res => {
+            if (!res.ok) throw new Error('Login inválido');
+            return res.json();
+        })
+        .then(user => {
             state.loggedIn = true;
-            state.currentUser = {
-                name: "Usuário Logado",
-                avatar: "https://randomuser.me/api/portraits/men/1.jpg",
-                likes: 10,
-                dislikes: 2
-            };
-
+            state.currentUser = user;
             loginBtn.textContent = 'Sair';
             userProfile.classList.remove('d-none');
-            document.getElementById('user-name').textContent = state.currentUser.name;
-            document.getElementById('user-avatar').src = state.currentUser.avatar;
-            document.getElementById('user-likes').textContent = state.currentUser.likes;
-            document.getElementById('user-dislikes').textContent = state.currentUser.dislikes;
-
+            document.getElementById('user-name').textContent = user.nome;
+            document.getElementById('user-avatar').src = user.foto || 'https://randomuser.me/api/portraits/men/1.jpg';
+            // Feche o modal de login se necessário
             loginModal.hide();
-        }
+        })
+        .catch(err => {
+            alert('Usuário ou senha inválidos!');
+        });
     }
 
     function logout() {

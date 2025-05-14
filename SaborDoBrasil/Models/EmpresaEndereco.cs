@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace SaborDoBrasil.Models
 {
     public class EmpresaEndereco
@@ -8,8 +10,8 @@ namespace SaborDoBrasil.Models
         public string Bairro { get; set; }
         public string Rua { get; set; }
         public string Numero { get; set; }
-
+        [Column("empresa_id")]
         public int EmpresaId { get; set; }
-        public Empresa Empresa { get; set; }
+        public Empresa? Empresa { get; set; }
     }
 }

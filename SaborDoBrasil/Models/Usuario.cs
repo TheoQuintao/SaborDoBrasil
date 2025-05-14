@@ -9,8 +9,8 @@ namespace SaborDoBrasil.Models
         public string Senha { get; set; }
         public string? Foto { get; set; }
 
-        public ICollection<Publicacao> Publicacoes { get; set; }
-        public ICollection<Interacao> Interacoes { get; set; }
-        public ICollection<Comentario> Comentarios { get; set; }
+        public ICollection<Publicacao>? Publicacoes { get; set; }
+        public ICollection<Interacao>? Interacoes { get; set; }
+        public ICollection<Comentario>? Comentarios { get; set; }
     }
 }

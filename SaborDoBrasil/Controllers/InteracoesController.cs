@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SaborDoBrasil.Models;
 
 [ApiController]
 [Route("api/[controller]")]

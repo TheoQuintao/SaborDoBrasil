@@ -1,9 +1,12 @@
-public class Empresa
+namespace SaborDoBrasil.Models
 {
-    public int Id { get; set; }
-    public string Nome { get; set; }
-    public string Logo { get; set; }
+    public class Empresa
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Logo { get; set; }
 
-    public ICollection<EmpresaEndereco> Enderecos { get; set; }
-    public ICollection<Publicacao> Publicacoes { get; set; }
+        public ICollection<EmpresaEndereco> Enderecos { get; set; }
+        public ICollection<Publicacao> Publicacoes { get; set; }
+    }
 }

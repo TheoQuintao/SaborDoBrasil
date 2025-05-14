@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SaborDoBrasil.Models;
 
 public class AppDbContext : DbContext
 {

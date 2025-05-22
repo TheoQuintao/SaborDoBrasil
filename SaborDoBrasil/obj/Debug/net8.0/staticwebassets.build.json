@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fsmtrN7wqgDfNN78uERFGvx/+uyvNsEjx2LfPx89t7Y=",
+  "Hash": "fqoKAviIjjMvKhKWCcQLSaU++d+D/H40lhklsfNEu8U=",
   "Source": "SaborDoBrasil",
   "BasePath": "_content/SaborDoBrasil",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\css\\style.css",
+      "SourceId": "SaborDoBrasil",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\",
+      "BasePath": "_content/SaborDoBrasil",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
     {
       "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\index.html",
       "SourceId": "SaborDoBrasil",
@@ -53,25 +72,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\script.js"
-    },
-    {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\Style\\style.css",
-      "SourceId": "SaborDoBrasil",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\",
-      "BasePath": "_content/SaborDoBrasil",
-      "RelativePath": "Style/style.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Style\\style.css"
     }
   ]
 }

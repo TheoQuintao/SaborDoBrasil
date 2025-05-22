@@ -42,72 +42,8 @@
                 
                 <div id="publications-container">
                     <!-- Publicação 1 -->
-                    <div class="publication-card">
-                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                             alt="Título do prato 01" class="publication-image">
-                        <h4>Título do prato 01</h4>
-                        <p class="publication-location">Local 01 - Macedo-AL</p>
-                        <div class="interaction-buttons">
-                            <button class="interaction-btn like-btn" data-id="1">
-                                <img src="assets/icons/flecha_cima_vazia.svg" alt="Like" class="icon">
-                                <span class="like-count">45</span>
-                            </button>
-                            <button class="interaction-btn dislike-btn" data-id="1">
-                                <img src="assets/icons/flecha_baixo_vazia.svg" alt="Dislike" class="icon">
-                                <span class="dislike-count">8</span>
-                            </button>
-                            <button class="interaction-btn comment-btn" data-id="1">
-                                <img src="assets/icons/chat.svg" alt="Comentar" class="icon">
-                                <span class="comment-count">12</span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Publicação 2 -->
-                    <div class="publication-card">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                             alt="Título do prato 02" class="publication-image">
-                        <h4>Título do prato 02</h4>
-                        <p class="publication-location">Local 02 - Macedo-AL</p>
-                        <div class="interaction-buttons">
-                            <button class="interaction-btn like-btn" data-id="2">
-                                <img src="assets/icons/flecha_cima_vazia.svg" alt="Like" class="icon">
-                                <span class="like-count">38</span>
-                            </button>
-                            <button class="interaction-btn dislike-btn" data-id="2">
-                                <img src="assets/icons/flecha_baixo_vazia.svg" alt="Dislike" class="icon">
-                                <span class="dislike-count">12</span>
-                            </button>
-                            <button class="interaction-btn comment-btn" data-id="2">
-                                <img src="assets/icons/chat.svg" alt="Comentar" class="icon">
-                                <span class="comment-count">8</span>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Publicação 3 -->
-                    <div class="publication-card">
-                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                             alt="Título do prato 03" class="publication-image">
-                        <h4>Título do prato 03</h4>
-                        <p class="publication-location">Local 03 - Macedo-AL</p>
-                        <div class="interaction-buttons">
-                            <button class="interaction-btn like-btn" data-id="3">
-                                <img src="assets/icons/flecha_cima_vazia.svg" alt="Like" class="icon">
-                                <span class="like-count">42</span>
-                            </button>
-                            <button class="interaction-btn dislike-btn" data-id="3">
-                                <img src="assets/icons/flecha_baixo_vazia.svg" alt="Dislike" class="icon">
-                                <span class="dislike-count">12</span>
-                            </button>
-                            <button class="interaction-btn comment-btn" data-id="3">
-                                <img src="assets/icons/chat.svg" alt="Comentar" class="icon">
-                                <span class="comment-count">15</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+                </div>  
+            </div>   
             <!-- Coluna Login -->
             <div class="col-md-3 p-4 login-column">
                 <div class="d-flex justify-content-center">
@@ -116,8 +52,8 @@
                 
                 <!-- Perfil do usuário (visível quando logado) -->
                 <div id="user-profile" class="d-none text-center mt-4">
-                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Usuário" class="user-avatar mb-2">
-                    <h5>Usuário Logado</h5>
+                    <img id="user-avatar" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Usuário" class="user-avatar mb-2">
+                    <h5 id="user-name">Usuário Logado</h5>
                     <div class="user-stats">
                         <p>Seus likes: <span id="user-likes">10</span></p>
                         <p>Seus dislikes: <span id="user-dislikes">2</span></p>

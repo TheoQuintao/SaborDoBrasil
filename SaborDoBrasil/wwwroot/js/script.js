@@ -57,9 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('/api/publicacoes')
       .then(res => res.json())
       .then(publicacoes => {
-        console.log('Publicações recebidas:', publicacoes); // <-- Adicione esta linha
+        // Se vier com $values, use ele
+        const pubs = Array.isArray(publicacoes) ? publicacoes : publicacoes.$values;
+        if (!Array.isArray(pubs)) {
+          alert('A resposta da API não é um array!');
+          return;
+        }
         container.innerHTML = '';
-        publicacoes.forEach(pub => {
+        pubs.forEach(pub => {
           container.innerHTML += `
             <div class="publication-card">
               <img src="${pub.imagem || 'assets/images/default.png'}" alt="${pub.titulo}" class="publication-image">
@@ -85,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
     // Funções
+
+    // Alterna entre login e logout. Se o usuário estiver logado, faz logout; senão, exibe o modal de login.
     function toggleLogin() {
         if (state.loggedIn) {
             logout();
@@ -93,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Realiza o login do usuário. Envia email e senha para a API, atualiza o estado e a interface se o login for bem-sucedido.
     function handleLogin() {
         const email = document.getElementById('loginEmail').value;
         const password = document.getElementById('loginPassword').value;
@@ -107,27 +115,30 @@ document.addEventListener('DOMContentLoaded', function() {
             return res.json();
         })
         .then(user => {
+            // Atualiza o estado do usuário logado
             state.loggedIn = true;
             state.currentUser = user;
             loginBtn.textContent = 'Sair';
             userProfile.classList.remove('d-none');
             document.getElementById('user-name').textContent = user.nome;
             document.getElementById('user-avatar').src = user.foto || 'https://randomuser.me/api/portraits/men/1.jpg';
-            // Feche o modal de login se necessário
+            document.getElementById('user-avatar-profile').src = user.foto || './assets/images/default.png';
             loginModal.hide();
+            loginBtn.focus(); // <-- aqui
         })
         .catch(err => {
-            alert('Usuário ou senha inválidos!');
+            document.getElementById('loginError').classList.remove('d-none');
         });
     }
 
+    // Faz logout do usuário, limpa o estado e reseta a interface.
     function logout() {
         state.loggedIn = false;
         state.currentUser = null;
         loginBtn.textContent = 'Entrar';
         userProfile.classList.add('d-none');
 
-        // Resetar interações do usuário
+        // Reseta os botões de like/dislike
         document.querySelectorAll('.like-btn').forEach(btn => {
             btn.classList.remove('active');
             btn.querySelector('.icon').src = 'assets/icons/flecha_cima_vazia.svg';
@@ -139,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Lida com o clique no botão de like. Adiciona ou remove like, atualiza contadores e interface.
     function handleLike(e) {
         if (!state.loggedIn) {
             loginModal.show();
@@ -162,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
             count++;
             state.currentUser.likes++;
 
-            // Remover dislike se existir
+            // Se houver dislike ativo, remove
             const dislikeBtn = btn.closest('.interaction-buttons').querySelector('.dislike-btn');
             if (dislikeBtn.classList.contains('active')) {
                 dislikeBtn.classList.remove('active');
@@ -179,6 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
             parseInt(document.getElementById('total-likes').textContent) + (btn.classList.contains('active') ? 1 : -1);
     }
 
+    // Lida com o clique no botão de dislike. Adiciona ou remove dislike, atualiza contadores e interface.
     function handleDislike(e) {
         if (!state.loggedIn) {
             loginModal.show();
@@ -202,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
             count++;
             state.currentUser.dislikes++;
 
-            // Remover like se existir
+            // Se houver like ativo, remove
             const likeBtn = btn.closest('.interaction-buttons').querySelector('.like-btn');
             if (likeBtn.classList.contains('active')) {
                 likeBtn.classList.remove('active');
@@ -219,6 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
             parseInt(document.getElementById('total-dislikes').textContent) + (btn.classList.contains('active') ? 1 : -1);
     }
 
+    // Abre o modal de comentários para a publicação selecionada, preenchendo os dados da publicação no modal.
     function openCommentModal(e) {
         if (!state.loggedIn) {
             loginModal.show();
@@ -228,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const pubId = e.currentTarget.dataset.id;
         state.currentPublication = pubId;
 
-        // Simular dados da publicação
+        // Busca os dados da publicação na interface
         const pubElement = document.querySelector(`.publication-card .like-btn[data-id="${pubId}"]`).closest('.publication-card');
         const pubImage = pubElement.querySelector('.publication-image').src;
         const pubTitle = pubElement.querySelector('h4').textContent;
@@ -241,15 +255,17 @@ document.addEventListener('DOMContentLoaded', function() {
         commentModal.show();
     }
 
+    // Habilita ou desabilita o botão de comentar conforme o campo de texto está vazio ou não.
     function toggleCommentButton() {
         submitCommentBtn.disabled = commentText.value.trim() === '';
     }
 
+    // Adiciona um novo comentário na interface (simulado, não envia para o backend).
     function submitComment() {
         const comment = commentText.value.trim();
         if (comment === '') return;
 
-        // Adicionar novo comentário
+        // Cria o elemento do novo comentário
         const commentsSection = document.getElementById('commentsSection');
         const newComment = document.createElement('div');
         newComment.className = 'comment-item';
@@ -267,21 +283,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         commentsSection.prepend(newComment);
         
-        // Atualizar contador de comentários
+        // Atualiza o contador de comentários
         const pubElement = document.querySelector(`.publication-card .like-btn[data-id="${state.currentPublication}"]`).closest('.publication-card');
         const commentCount = pubElement.querySelector('.comment-count');
         commentCount.textContent = parseInt(commentCount.textContent) + 1;
 
-        // Resetar formulário
+        // Reseta o formulário
         commentText.value = '';
         submitCommentBtn.disabled = true;
     }
 
+    // Simula a exclusão de um comentário na interface e atualiza o contador.
     function deleteComment() {
-        // Simular exclusão do comentário
         deleteModal.hide();
         
-        // Atualizar contador de comentários
+        // Atualiza o contador de comentários
         const pubElement = document.querySelector(`.publication-card .like-btn[data-id="${state.currentPublication}"]`).closest('.publication-card');
         const commentCount = pubElement.querySelector('.comment-count');
         commentCount.textContent = Math.max(0, parseInt(commentCount.textContent) - 1);

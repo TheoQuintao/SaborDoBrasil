@@ -72,15 +72,15 @@ document.addEventListener('DOMContentLoaded', function() {
               <p class="publication-location">${pub.local}</p>
               <div class="interaction-buttons">
                 <button class="interaction-btn like-btn" data-id="${pub.id}">
-                  <img src="assets/icons/flecha_cima_vazia.svg" alt="Like" class="icon">
+                  <img src="../assets/icones/flecha_cima_vazia.svg" alt="Like" class="icon">
                   <span class="like-count">${pub.likes || 0}</span>
                 </button>
                 <button class="interaction-btn dislike-btn" data-id="${pub.id}">
-                  <img src="assets/icons/flecha_baixo_vazia.svg" alt="Dislike" class="icon">
+                  <img src="../assets/icones/flecha_baixo_vazia.svg" alt="Dislike" class="icon">
                   <span class="dislike-count">${pub.dislikes || 0}</span>
                 </button>
                 <button class="interaction-btn comment-btn" data-id="${pub.id}">
-                  <img src="assets/icons/chat.svg" alt="Comentar" class="icon">
+                  <img src="../assets/icones/chat.svg" alt="Comentar" class="icon">
                   <span class="comment-count">${pub.comentarios ? pub.comentarios.length : 0}</span>
                 </button>
               </div>
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
             userProfile.classList.remove('d-none');
             document.getElementById('user-name').textContent = user.nome;
             document.getElementById('user-avatar').src = user.foto || 'https://randomuser.me/api/portraits/men/1.jpg';
-            document.getElementById('user-avatar-profile').src = user.foto || './assets/images/default.png';
+            document.getElementById('user-avatar-profile').src = user.foto;
             loginModal.hide();
             loginBtn.focus(); // <-- aqui
         })

@@ -1,135 +1,135 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\index.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\index.png",
       "PackagePath": "staticwebassets\\assets\\Telas_SPA\\index.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\login-erro.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\login-erro.png",
       "PackagePath": "staticwebassets\\assets\\Telas_SPA\\login-erro.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\login.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\login.png",
       "PackagePath": "staticwebassets\\assets\\Telas_SPA\\login.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado.png",
       "PackagePath": "staticwebassets\\assets\\Telas_SPA\\usuario_logado.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado_comentario.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado_comentario.png",
       "PackagePath": "staticwebassets\\assets\\Telas_SPA\\usuario_logado_comentario.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado_comentario_atualizado.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado_comentario_atualizado.png",
       "PackagePath": "staticwebassets\\assets\\Telas_SPA\\usuario_logado_comentario_atualizado.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado_comentario_excluir.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado_comentario_excluir.png",
       "PackagePath": "staticwebassets\\assets\\Telas_SPA\\usuario_logado_comentario_excluir.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado_comentario_vazio.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\Telas_SPA\\usuario_logado_comentario_vazio.png",
       "PackagePath": "staticwebassets\\assets\\Telas_SPA\\usuario_logado_comentario_vazio.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\arquivos_CSV\\empresa.csv",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\arquivos_CSV\\empresa.csv",
       "PackagePath": "staticwebassets\\assets\\arquivos_CSV\\empresa.csv"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\arquivos_CSV\\publicacao.csv",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\arquivos_CSV\\publicacao.csv",
       "PackagePath": "staticwebassets\\assets\\arquivos_CSV\\publicacao.csv"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\arquivos_CSV\\usuario.csv",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\arquivos_CSV\\usuario.csv",
       "PackagePath": "staticwebassets\\assets\\arquivos_CSV\\usuario.csv"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\foto_usuario\\usuario_01.jpg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\foto_usuario\\usuario_01.jpg",
       "PackagePath": "staticwebassets\\assets\\foto_usuario\\usuario_01.jpg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\foto_usuario\\usuario_02.jpg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\foto_usuario\\usuario_02.jpg",
       "PackagePath": "staticwebassets\\assets\\foto_usuario\\usuario_02.jpg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\foto_usuario\\usuario_03.jpg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\foto_usuario\\usuario_03.jpg",
       "PackagePath": "staticwebassets\\assets\\foto_usuario\\usuario_03.jpg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\Globe.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\Globe.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\Globe.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\Instagram.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\Instagram.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\Instagram.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\Twitter.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\Twitter.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\Twitter.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\Whatsapp.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\Whatsapp.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\Whatsapp.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\chat.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\chat.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\chat.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\flecha_baixo_cheia.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\flecha_baixo_cheia.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\flecha_baixo_cheia.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\flecha_baixo_vazia.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\flecha_baixo_vazia.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\flecha_baixo_vazia.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\flecha_cima_cheia.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\flecha_cima_cheia.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\flecha_cima_cheia.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\flecha_cima_vazia.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\flecha_cima_vazia.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\flecha_cima_vazia.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\lapis_editar.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\lapis_editar.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\lapis_editar.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\lixeira_deletar.svg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\icones\\lixeira_deletar.svg",
       "PackagePath": "staticwebassets\\assets\\icones\\lixeira_deletar.svg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\logo\\logo_sabor_do_brasil.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\logo\\logo_sabor_do_brasil.png",
       "PackagePath": "staticwebassets\\assets\\logo\\logo_sabor_do_brasil.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\modelagem\\sugestao_modelagem.jpeg",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\modelagem\\sugestao_modelagem.jpeg",
       "PackagePath": "staticwebassets\\assets\\modelagem\\sugestao_modelagem.jpeg"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\publicacao\\publicacao01.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\publicacao\\publicacao01.png",
       "PackagePath": "staticwebassets\\assets\\publicacao\\publicacao01.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\publicacao\\publicacao02.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\publicacao\\publicacao02.png",
       "PackagePath": "staticwebassets\\assets\\publicacao\\publicacao02.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\publicacao\\publicacao03.png",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\assets\\publicacao\\publicacao03.png",
       "PackagePath": "staticwebassets\\assets\\publicacao\\publicacao03.png"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\css\\style.css",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\index.html",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\js\\script.js",
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {

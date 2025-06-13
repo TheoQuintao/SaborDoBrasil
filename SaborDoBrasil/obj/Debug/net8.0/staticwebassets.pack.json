@@ -125,6 +125,10 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\data\\DDL.sql",
+      "PackagePath": "staticwebassets\\data\\DDL.sql"
+    },
+    {
       "Id": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

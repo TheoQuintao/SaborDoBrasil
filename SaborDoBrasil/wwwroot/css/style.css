@@ -52,7 +52,7 @@ body, html {
 .contador-numero {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #d2691e;
+    color: #ffc107;
 }
 .contador-label {
     font-size: 0.9rem;
@@ -91,10 +91,10 @@ body, html {
 }
 .publicacao {
     background: #fff;
-    border: 1px solid #e0e0e0;
+    border: none;
     border-radius: 8px;
     margin-bottom: 18px;
-    padding: 12px 16px 16px 16px;
+    padding: 0;
     box-shadow: 0 2px 8px #0001;
 }
 .publicacao-titulo {
@@ -126,16 +126,8 @@ body, html {
     font-size: 1.1rem;
     margin-bottom: 8px;
 }
-.publicacao-votos .up img {
-    width: 18px;
-    margin-right: 2px;
-    vertical-align: middle;
-}
-.publicacao-votos .down img {
-    width: 18px;
-    margin-right: 2px;
-    vertical-align: middle;
-}
+.publicacao-votos .up img,
+.publicacao-votos .down img,
 .publicacao-votos .comentarios img {
     width: 18px;
     margin-right: 2px;
@@ -178,7 +170,7 @@ body, html {
     border-radius: 4px;
 }
 .btn-comentar {
-    background: #d2691e;
+    background: #ffc107;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -246,7 +238,7 @@ body, html {
 }
 .btn-entrar, .btn-sair {
     width: 160px;
-    background: #d2691e;
+    background: #ff8b07;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -268,18 +260,28 @@ body, html {
 .modal-login, .modal-excluir {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinha no topo */
     justify-content: center;
     z-index: 100;
 }
-.modal-content {
+.modal-login .modal-content, .modal-excluir .modal-content {
+    margin-top: 32px;
     background: #fff;
+    box-shadow: 0 4px 24px #0002;
+    width: 25vw;
+    min-width: 320px;
+    max-width: 400px;
+    border: 1px solid #222;
+    border-radius: 12px;
+}
+.modal-content {
+    background: #fff; /* Garante fundo sólido */
     border-radius: 12px;
     padding: 28px 32px 20px 32px;
     min-width: 340px;
-    box-shadow: 0 4px 24px #0002;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,7 +294,7 @@ body, html {
     width: 260px;
     margin-bottom: 10px;
     padding: 7px 10px;
-    border: 1.5px solid #d2691e;
+    border: 1.5px solid #ffc107;
     border-radius: 6px;
     font-size: 1rem;
 }
@@ -304,8 +306,8 @@ body, html {
 }
 .btn-cancelar {
     background: #fff;
-    color: #d2691e;
-    border: 1.5px solid #d2691e;
+    color: #ffc107;
+    border: 1.5px solid #ffc107;
     border-radius: 6px;
     padding: 6px 24px;
     font-weight: bold;
@@ -316,7 +318,7 @@ body, html {
     background: #f5f5f5;
 }
 .btn-entrar-modal {
-    background: #d2691e;
+    background: #ffc107;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -368,10 +370,31 @@ body, html {
     background: #b71c1c;
 }
 
+/* Modal Cadastro */
+.modal-cadastro {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2000;
+}
+.modal-cadastro .modal-content {
+    margin-top: 48px;
+    background: #fff;
+    box-shadow: 0 4px 24px #0002;
+    width: 25vw;
+    min-width: 320px;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
 /* Rodapé */
 footer {
     width: 100vw;
-    background: #d2691e;
+    background: #ffc107;
     color: #fff;
     position: fixed;
     left: 0;

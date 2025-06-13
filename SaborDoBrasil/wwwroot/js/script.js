@@ -24,22 +24,31 @@ btnEntrar.onclick = () => {
 };
 btnCancelar.onclick = () => hide(modalLogin);
 
-btnEntrarModal.onclick = () => {
-    // Simulação de login
-    if (inputEmail.value === 'usuario_01@email.com' && inputSenha.value === '1234') {
-        usuario = {
-            nome: 'usuario_01',
-            avatar: './assets/foto_usuario/usuario_01.jpg',
-            likes: 2,
-            dislikes: 1
-        };
+btnEntrarModal.onclick = async () => {
+    const res = await fetch('/api/usuario/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: inputEmail.value, senha: inputSenha.value })
+    });
+    if (res.ok) {
+        usuario = await res.json();
         hide(modalLogin);
         show(usuarioLogado);
         hide(btnEntrar);
         show(btnSair);
         document.querySelectorAll('.comentario-usuario').forEach(i => i.value = usuario.nome);
+        // Atualize likes/dislikes do usuário logado se necessário
+        document.getElementById('likes-user').textContent = usuario.Likes;
+        document.getElementById('dislikes-user').textContent = usuario.Dislikes;
     } else {
-        show(loginErro);
+        // No login
+        if (res.status === 401) {
+            loginErro.textContent = "Usuário ou senha incorretos.";
+            show(loginErro);
+        } else if (!res.ok) {
+            loginErro.textContent = "Erro ao tentar login.";
+            show(loginErro);
+        }
     }
 };
 btnSair.onclick = () => {
@@ -137,3 +146,62 @@ comentarioInputs.forEach((input, idx) => {
     const btn = document.querySelectorAll('.btn-comentar')[idx];
     btn.disabled = true;
 });
+
+// Cadastro
+const btnCadastrar = document.getElementById('btn-cadastrar');
+const modalCadastro = document.getElementById('modal-cadastro');
+const btnCadastrarModal = document.querySelector('.btn-cadastrar-modal');
+const btnCancelarCadastro = document.querySelector('.btn-cancelar-cadastro');
+const cadastroErro = document.querySelector('.cadastro-erro');
+const cadastroSucesso = document.querySelector('.cadastro-sucesso');
+const inputNome = document.querySelector('.input-nome');
+const inputEmailCadastro = document.querySelector('.input-email-cadastro');
+const inputApelido = document.querySelector('.input-apelido');
+const inputSenhaCadastro = document.querySelector('.input-senha-cadastro');
+
+btnCadastrar && (btnCadastrar.onclick = () => {
+    show(modalCadastro);
+    inputNome.value = '';
+    inputEmailCadastro.value = '';
+    inputApelido.value = '';
+    inputSenhaCadastro.value = '';
+    hide(cadastroErro);
+    hide(cadastroSucesso);
+});
+btnCancelarCadastro && (btnCancelarCadastro.onclick = () => hide(modalCadastro));
+
+btnCadastrarModal && (btnCadastrarModal.onclick = async () => {
+    const nome = inputNome.value.trim();
+    const email = inputEmailCadastro.value.trim();
+    const apelido = inputApelido.value.trim();
+    const senha = inputSenhaCadastro.value.trim();
+    if (!nome || !email || !apelido || !senha) {
+        cadastroErro.textContent = "Preencha todos os campos.";
+        show(cadastroErro);
+        return;
+    }
+    const res = await fetch('/api/usuario/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, email, apelido, senha })
+    });
+    if (res.ok) {
+        hide(cadastroErro);
+        show(cadastroSucesso);
+        setTimeout(() => {
+            hide(modalCadastro);
+        }, 1500);
+    } else {
+        // No cadastro
+        if (res.status === 409) {
+            cadastroErro.textContent = "E-mail já cadastrado.";
+            show(cadastroErro);
+        } else if (!res.ok) {
+            cadastroErro.textContent = "Erro ao cadastrar.";
+            show(cadastroErro);
+        }
+    }
+});
+
+// Fechar modal cadastro ao clicar fora
+modalCadastro && (modalCadastro.onclick = e => { if (e.target === modalCadastro) hide(modalCadastro); });

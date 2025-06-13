@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "u0sGa0X/OPS8tDmJTLho0wVb6zz8W4CiwO3d55aiQqQ=",
+  "Hash": "27Z2Nj/bjD6/yUkcISJBHvmvHJ62RPbW3u4je7Ox0+Q=",
   "Source": "SaborDoBrasil",
   "BasePath": "_content/SaborDoBrasil",
   "Mode": "Default",
@@ -604,6 +604,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\data\\DDL.sql",
+      "SourceId": "SaborDoBrasil",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\",
+      "BasePath": "_content/SaborDoBrasil",
+      "RelativePath": "data/DDL.sql",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\DDL.sql"
     },
     {
       "Identity": "D:\\GitTheo\\SaborDoBrasil\\SaborDoBrasil\\wwwroot\\index.html",
